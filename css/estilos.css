@@ -75,7 +75,7 @@ img{
 /***** Header *****/
 .header{
     background-image: url(../img/banner.jpg);
-    height: 45rem;
+    height: 40rem;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
@@ -162,6 +162,11 @@ img{
     text-transform: uppercase;
     font-weight: bold;
     margin-bottom: 2rem;
+    border: none;
+}
+
+.boton:hover{
+    cursor: pointer;
 }
 
 @media (min-width: 768px){
@@ -208,7 +213,8 @@ img{
 }
 
 .footer{
-    padding: 1rem 0 2rem 0;
+    margin-top: 3rem;
+    padding-bottom: 1rem;
     background-color: #000;
 }
 
@@ -224,4 +230,84 @@ img{
     .navegacion__footer{
         display: inline-block;
     }
+}
+
+
+/************ Pagina Nosotros ***********/
+@media (min-width: 769px){
+    .sobre-nosotros{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        align-items: center;
+        column-gap: 2rem;
+    }
+}
+
+/************ Pagina Cursos ***********/
+.curso{
+    border-bottom: 1px solid #d6d1d1;
+    padding: 3rem 0;
+}
+
+.curso:last-of-type{
+    border-bottom: none;
+}
+
+@media (min-width: 769px){
+    .curso{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 2rem;
+    }
+}
+
+.curso__label{
+    font-family: var(--fuenteHeading);
+    font-weight: bold;
+}
+
+.curso__info{
+    font-weight: 400;
+}
+
+.curso__label,
+.curso__info{
+    font-size: 2rem;
+}
+
+/************ Pagina Contacto***********/
+.contacto-bg{
+    background-image: url(../img/contacto.jpg);
+    height: 40rem;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.formulario{
+    background-color: var(--blanco);
+    margin: -9rem auto 0 auto;
+    width: 95%;
+    padding: 2rem;
+}
+
+.campo{
+    display: flex;
+    margin-bottom: 2rem;
+}
+
+.campo__label{
+    flex: 0 0 9rem;
+    text-align: right;
+    padding-right: 2rem;
+}
+
+.campo__field{
+    flex: 1;
+    border: 1px solid #d6d1d1;
+}
+
+.campo__field--textarea{
+    height: 13rem;
+    width: 100%;
+    border: 1px solid #d6d1d1;
 }
